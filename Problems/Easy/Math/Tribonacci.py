@@ -22,33 +22,26 @@ class Solution:
         return temp
 
     @cache
-    def tribonacci2(self, n: int) -> int:
-        if n == 0:
+    def tribonacci2(self, num: int) -> int:
+        if num == 0:
             return 0
-        elif n < 3:
+        elif num < 3:
             return 1
         else:
-            return Solution.tribonacci2(self, n - 1) + Solution.tribonacci2(self, n - 2) + Solution.tribonacci2(self,
-                                                                                                             n - 3)
+            return Solution.tribonacci2(self, num - 1) + Solution.tribonacci2(
+                self, num - 2) + Solution.tribonacci2(self, num - 3)
     
-    def tribonacci3(self, n: int) -> int:
+    def tribonacci3(self, num: int) -> int:
         a = 0
         b = 1
         c = 1
         temp = 0
-        if n in [1, 0]:
-            return n
-        elif n == 2:
+        if num in [1, 0]:
+            return num
+        elif num == 2:
             return 1
         else:
-            for i in range(3, n+1):
+            for i in range(3, num+1):
                 temp = a + b + c
                 a, b, c = b, c, temp
         return temp
-                
-            
-
-s = Solution()
-print(s.tribonacci(num=25))
-print(s.tribonacci2(n=25))
-print(s.tribonacci3(n=25))

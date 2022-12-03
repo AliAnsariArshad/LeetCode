@@ -7,6 +7,3 @@ class Solution:
 
         return n if n % 2 == 0 else 2 * n
 
-
-s = Solution()
-print(s.smallest_even_multiple(9))
