@@ -2,7 +2,7 @@ import unittest
 from Problems.Easy.AddDigits import Solution
 
 
-class test_one_plus(unittest.TestCase):
+class TestOnePlus(unittest.TestCase):
 
     def test_single_digit_number(self):
         actual = Solution.addDigits(self, 1)
