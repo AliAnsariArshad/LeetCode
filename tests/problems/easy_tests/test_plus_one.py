@@ -1,5 +1,5 @@
 import unittest
-from Problems.Easy.AddDigits import Solution
+from problems.Easy.AddDigits import Solution
 
 
 class test_one_plus(unittest.TestCase):
